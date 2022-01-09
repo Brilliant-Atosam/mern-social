@@ -1,0 +1,57 @@
+POST  http://localhost:3001/auth/register
+Content-Type: application/json
+
+{
+    "username": "sam",
+    "email": "sam@sam.me",
+    "password": "samsam1"
+}
+
+###
+GET http://localhost:3001/users
+###
+GET http://localhost:3001/users/friends/617031dbbf0c951ef8f12930
+###
+GET http://localhost:3001/posts
+
+###
+PUT http://localhost:3001/users/61741ec2a1281f2f48050fe1
+Content-Type: application/json
+
+{
+    "userId":"61741ec2a1281f2f48050fe1",
+    "city": "Accra",
+    "relationship":"None of your business",
+    "from":"Accra",
+    "profilePicture":"person/4.jpeg",
+    "coverPicture":"post/2.jpeg",
+    "desc":"No love is better than fake love"
+}
+
+###
+POST http://localhost:3001/posts/61741ec2a1281f2f48050fe1
+Content-Type: application/json
+
+{
+    "desc": "Hey! Boys will always be boys!",
+    "img":"post/2.jpeg"
+}
+
+###
+GET http://localhost:3001/users/617031ccbf0c951ef8f1292e
+###
+PUT http://localhost:3001/users/17031ccbf0c951ef8f1292e/follow
+Content-Type: application/json
+
+{
+    "userId":"61741ec2a1281f2f48050fe1"
+    
+}
+###
+PUT http://localhost:3001/posts/61703aad22c94a07b0feda19/like
+Content-Type: application/json
+
+{
+    "userId":"61741ec2a1281f2f48050fe1"
+}
+
